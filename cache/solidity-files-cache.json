@@ -1088,8 +1088,8 @@
       }
     },
     "src/modifierdemo.sol": {
-      "lastModificationDate": 1701161564100,
-      "contentHash": "576261193e47527fc8a416e85f291f01",
+      "lastModificationDate": 1701162043862,
+      "contentHash": "2d8a4d5f8d044850c7601608166f8658",
       "sourceName": "src/modifierdemo.sol",
       "solcConfig": {
         "settings": {
@@ -1128,6 +1128,47 @@
         },
         "ModifierWithNoReentrancyDemo": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "modifierdemo.sol/ModifierWithNoReentrancyDemo.json"
+        }
+      }
+    },
+    "src/msgdemo.sol": {
+      "lastModificationDate": 1701307238256,
+      "contentHash": "858498119f2c7f4c5aded76a0cdbc660",
+      "sourceName": "src/msgdemo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "MsgDemo": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "msgdemo.sol/MsgDemo.json"
         }
       }
     },
@@ -1523,8 +1564,8 @@
       }
     },
     "test/modifierdemo.t.sol": {
-      "lastModificationDate": 1701161974550,
-      "contentHash": "9254ff76c690d518940d45df93e7265d",
+      "lastModificationDate": 1701162388729,
+      "contentHash": "ad592eda8df00ffd9bbc513690e7176f",
       "sourceName": "test/modifierdemo.t.sol",
       "solcConfig": {
         "settings": {
@@ -1580,8 +1621,68 @@
         "ModifierDemoTest": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "modifierdemo.t.sol/ModifierDemoTest.json"
         },
-        "ModifierWithReentrancyDemoTest": {
-          "0.8.21+commit.d9974bed.Darwin.appleclang": "modifierdemo.t.sol/ModifierWithReentrancyDemoTest.json"
+        "ModifierWithNoReentrancyDemoTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "modifierdemo.t.sol/ModifierWithNoReentrancyDemoTest.json"
+        }
+      }
+    },
+    "test/msgdemo.t.sol": {
+      "lastModificationDate": 1701307278760,
+      "contentHash": "1cea38bfcdd6c71c376ddb71e79519d9",
+      "sourceName": "test/msgdemo.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/msgdemo.sol"
+      ],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "MsgDemoTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "msgdemo.t.sol/MsgDemoTest.json"
         }
       }
     },
