@@ -1172,6 +1172,53 @@
         }
       }
     },
+    "src/new_create_demo.sol": {
+      "lastModificationDate": 1701398858611,
+      "contentHash": "22733ccb33d81299e158a5f8bd57fffb",
+      "sourceName": "src/new_create_demo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "HelloContract": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "new_create_demo.sol/HelloContract.json"
+        },
+        "HelloContractWithArgs": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "new_create_demo.sol/HelloContractWithArgs.json"
+        },
+        "NewCreateDemo": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "new_create_demo.sol/NewCreateDemo.json"
+        }
+      }
+    },
     "src/receivce_fallback_demo.sol": {
       "lastModificationDate": 1701050663142,
       "contentHash": "437a8e2f9f115d932c2978cf0b6774a4",
@@ -1683,6 +1730,66 @@
       "artifacts": {
         "MsgDemoTest": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "msgdemo.t.sol/MsgDemoTest.json"
+        }
+      }
+    },
+    "test/new_create_demo.t.sol": {
+      "lastModificationDate": 1701397863240,
+      "contentHash": "1ea7e4c19dbeca9365cd13d56c40fe2c",
+      "sourceName": "test/new_create_demo.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/new_create_demo.sol"
+      ],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "NewDemoTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "new_create_demo.t.sol/NewDemoTest.json"
         }
       }
     },
