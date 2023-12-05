@@ -1219,6 +1219,53 @@
         }
       }
     },
+    "src/proxydemo.sol": {
+      "lastModificationDate": 1701746330659,
+      "contentHash": "9e5094562463c339ebd8614154871a67",
+      "sourceName": "src/proxydemo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "LogicContractV1": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "proxydemo.sol/LogicContractV1.json"
+        },
+        "LogicContractV2": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "proxydemo.sol/LogicContractV2.json"
+        },
+        "ProxyContract": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "proxydemo.sol/ProxyContract.json"
+        }
+      }
+    },
     "src/receivce_fallback_demo.sol": {
       "lastModificationDate": 1701050663142,
       "contentHash": "437a8e2f9f115d932c2978cf0b6774a4",
@@ -1304,6 +1351,47 @@
       "artifacts": {
         "StringDemo": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "stringdemo.sol/StringDemo.json"
+        }
+      }
+    },
+    "src/thisdemo.sol": {
+      "lastModificationDate": 1701419579132,
+      "contentHash": "03b81f0b12d1ddbabaa98d24dfd3ebe5",
+      "sourceName": "src/thisdemo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "ThisDemo": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "thisdemo.sol/ThisDemo.json"
         }
       }
     },
@@ -1793,6 +1881,66 @@
         }
       }
     },
+    "test/prxoydemo.t.sol": {
+      "lastModificationDate": 1701746176156,
+      "contentHash": "9c2e296ce8a425cb3ffbddd2bcf87652",
+      "sourceName": "test/prxoydemo.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/proxydemo.sol"
+      ],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "ProxyDemoTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "prxoydemo.t.sol/ProxyDemoTest.json"
+        }
+      }
+    },
     "test/receive_fallback_demo.t.sol": {
       "lastModificationDate": 1701051174429,
       "contentHash": "822c7a3c25f85848ac68569d8f3814c3",
@@ -1916,6 +2064,47 @@
       "artifacts": {
         "StringDemoTest": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "stringdemo.t.sol/StringDemoTest.json"
+        }
+      }
+    },
+    "test/thisdemo.t.sol": {
+      "lastModificationDate": 1701418995230,
+      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
+      "sourceName": "test/thisdemo.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": null,
+      "artifacts": {
+        "thisdemo.t": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "thisdemo.t.sol/thisdemo.t.json"
         }
       }
     }
