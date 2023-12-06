@@ -240,4 +240,58 @@ contract YulDemoTest is DSTest {
         console2.logBytes1(bytes1(uint8(result)));
         assertTrue(result == 0x00, "result should be 0x00");
     }
+
+    function testShr() public {
+        uint256 result = demo.Shr(0, 2);
+        assertTrue(result == 2, "result should be 2");
+
+        result = demo.Shr(1, 2);
+        assertTrue(result == 1, "result should be 1");
+
+        result = demo.Shr(2, 2);
+        assertTrue(result == 0, "result should be 0");
+    }
+
+    function testSar() public {
+        int256 result = demo.Sar(0, 2);
+        assertTrue(result == 2, "result should be 2");
+
+        result = demo.Sar(1, 2);
+        assertTrue(result == 1, "result should be 1");
+
+        result = demo.Sar(2, 2);
+        assertTrue(result == 0, "result should be 0");
+
+        result = demo.Sar(1, -2);
+        assertTrue(result == -1, "result should be -1");
+
+        result = demo.Sar(2, -2);
+        assertTrue(result == -1, "result should be -1");
+
+        result = demo.Sar(5, -2);
+        assertTrue(result == -1, "result should be -1");
+    }
+
+    function testKeccak256() public {
+        bytes32 result = demo.Keccak256("hello world", 11);
+        bytes32 result2 = keccak256("hello world");
+        bytes32 result3 = demo.Keccak256_2("hello world");
+
+        assertTrue(result == result2, "result should be equal");
+        assertTrue(result == result3, "result should be equal");
+    }
+
+    function testMload() public {
+        bytes memory str = "hello world";
+        // 对于动态数组（或字符串），其内存布局为：[length, data...] ，其中 length 为数组长度（32个字节，256位），data 为数组数据。
+        // mload()读取前32个字节，即读取length
+        uint256 result = demo.Mload_GetLength(str);
+        assertTrue(result == 11, "result should be 11");
+
+        // offset为32，即从data开始读取,读取长度为32个字节
+        bytes32 result2 = demo.Mload(str, 32);
+        // 使用 abi.encodePacked 来动态生成期望的 bytes32 值
+        bytes32 expected = bytes32(abi.encodePacked(str));
+        assertTrue(result2 == expected, "Incorrect data read from memory");
+    }
 }

@@ -126,4 +126,68 @@ contract YulDemoContract {
         }
         return result;
     }
+
+    function Shr(uint256 a, uint256 b) public pure returns (uint256) {
+        uint256 result;
+        assembly {
+            let s := shr(a, b)
+            result := s
+        }
+        return result;
+    }
+
+    function Sar(uint256 a, int256 b) public pure returns (int256) {
+        int256 result;
+        assembly {
+            let s := sar(a, b)
+            result := s
+        }
+        return result;
+    }
+
+    function Keccak256(
+        bytes memory a,
+        uint256 length
+    ) public pure returns (bytes32) {
+        bytes32 result;
+        assembly {
+            // 获取指向数组数据的指针，跳过长度前缀
+            let dataPtr := add(a, 32)
+            let s := keccak256(dataPtr, length)
+            result := s
+        }
+        return result;
+    }
+
+    function Keccak256_2(bytes memory a) public pure returns (bytes32) {
+        bytes32 result;
+        assembly {
+            let dataPtr := add(a, 32)
+            let s := keccak256(dataPtr, mload(a))
+            result := s
+        }
+        return result;
+    }
+
+    function Mload(
+        bytes memory a,
+        uint256 offset
+    ) public pure returns (bytes32) {
+        bytes32 result;
+        assembly {
+            let dataPtr := add(a, offset)
+            let s := mload(dataPtr)
+            result := s
+        }
+        return result;
+    }
+
+    function Mload_GetLength(bytes memory a) public pure returns (uint256) {
+        uint256 result;
+        assembly {
+            let s := mload(a)
+            result := s
+        }
+        return result;
+    }
 }
