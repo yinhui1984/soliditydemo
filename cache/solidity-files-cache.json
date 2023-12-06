@@ -1220,8 +1220,8 @@
       }
     },
     "src/proxydemo.sol": {
-      "lastModificationDate": 1701746330659,
-      "contentHash": "9e5094562463c339ebd8614154871a67",
+      "lastModificationDate": 1701757088045,
+      "contentHash": "f7e25e354e4481ae6148d3a87295247c",
       "sourceName": "src/proxydemo.sol",
       "solcConfig": {
         "settings": {
@@ -1392,6 +1392,47 @@
       "artifacts": {
         "ThisDemo": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "thisdemo.sol/ThisDemo.json"
+        }
+      }
+    },
+    "src/yuldemo.sol": {
+      "lastModificationDate": 1701830193188,
+      "contentHash": "04f670bc40e47bfd9189d3ca47abbb82",
+      "sourceName": "src/yuldemo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "YulDemoContract": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "yuldemo.sol/YulDemoContract.json"
         }
       }
     },
@@ -2068,8 +2109,8 @@
       }
     },
     "test/thisdemo.t.sol": {
-      "lastModificationDate": 1701418995230,
-      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
+      "lastModificationDate": 1701758786217,
+      "contentHash": "81240176fb4511bb1768c1de6f5f8b73",
       "sourceName": "test/thisdemo.t.sol",
       "solcConfig": {
         "settings": {
@@ -2101,10 +2142,70 @@
         }
       },
       "imports": [],
-      "versionRequirement": null,
+      "versionRequirement": "^0.8.11",
       "artifacts": {
         "thisdemo.t": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "thisdemo.t.sol/thisdemo.t.json"
+        }
+      }
+    },
+    "test/yuldemo.t.sol": {
+      "lastModificationDate": 1701831408012,
+      "contentHash": "211828dddfca8785c2f1939fd5cbcf18",
+      "sourceName": "test/yuldemo.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/yuldemo.sol"
+      ],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "YulDemoTest": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "yuldemo.t.sol/YulDemoTest.json"
         }
       }
     }
