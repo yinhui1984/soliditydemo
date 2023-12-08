@@ -190,4 +190,89 @@ contract YulDemoContract {
         }
         return result;
     }
+
+    function Mstore(bytes memory a, uint256 offset, bytes32 value) public pure {
+        assembly {
+            let dataPtr := add(a, offset)
+            mstore(dataPtr, value)
+        }
+    }
+
+    uint256 private value_0; // slot 0
+    mapping(address => uint) map_1; // slot 1
+
+    function SetV0(uint256 value) public {
+        value_0 = value;
+    }
+
+    function GetV0() public view returns (uint256) {
+        return value_0;
+    }
+
+    function Sload(uint256 slot) public view returns (uint256) {
+        uint256 result;
+        assembly {
+            let s := sload(slot)
+            result := s
+        }
+        return result;
+    }
+
+    function Sstore(uint256 slot, uint256 value) public {
+        assembly {
+            sstore(slot, value)
+        }
+    }
+
+    function SetMap1Value(address key, uint256 value) public {
+        map_1[key] = value;
+    }
+
+    function GetMap1Value(address key) public view returns (uint256) {
+        return map_1[key];
+    }
+
+    function GetMap1Value2(address key) public view returns (uint256) {
+        uint256 slot = uint256(keccak256(abi.encodePacked(key, uint256(1))));
+        return Sload(slot);
+    }
+
+    function GetMap1Slot() public pure returns (uint256) {
+        uint256 result;
+        assembly {
+            result := map_1.slot
+        }
+        return result;
+    }
+
+    // function Msize() public pure returns (bytes32) {
+    //     bytes32 str = "hello world";
+    //     bytes32 data;
+
+    //     // 如果需要编译通过，需要在编译器设置优化选项为false
+    //     // 比如在foundry.toml中设置：optimize = false
+    //     assembly {
+    //         let ptr := msize()
+    //         mstore(ptr, str)
+    //         data := mload(ptr)
+    //     }
+
+    //     return data;
+    // }
+
+    function Caller() public view returns (address) {
+        address result;
+        assembly {
+            result := caller()
+        }
+        return result;
+    }
+
+    function Calldataload(uint256 p) public pure returns (bytes32) {
+        bytes32 result;
+        assembly {
+            result := calldataload(p)
+        }
+        return result;
+    }
 }

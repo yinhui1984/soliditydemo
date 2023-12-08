@@ -2,6 +2,8 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
+optimizer = false
+
 
 [rpc_endpoints]
 theNet = "https://rpc.flashbots.net"

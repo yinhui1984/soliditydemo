@@ -294,4 +294,127 @@ contract YulDemoTest is DSTest {
         bytes32 expected = bytes32(abi.encodePacked(str));
         assertTrue(result2 == expected, "Incorrect data read from memory");
     }
+
+    function testMstore() public {
+        bytes memory str = "hello world";
+        demo.Mstore(str, 32, bytes32(abi.encode("hello WORLD")));
+        console2.logString(string(str));
+
+        // 不应该相等，调用demo.Mstore时传入的是字符串的副本
+        assertTrue(
+            keccak256(str) != keccak256("hello WORLD"),
+            "result should not be equal"
+        );
+    }
+
+    function testMstore_local() public {
+        bytes memory str = "hello world";
+        assembly {
+            mstore(add(str, 32), "hello WORLD")
+        }
+        console2.logString(string(str));
+        // 应该相等，直接修改了字符串的内存
+        assertTrue(
+            keccak256(str) == keccak256("hello WORLD"),
+            "result should not be equal"
+        );
+    }
+
+    function testMstore8() public {
+        bytes memory str = "hello world";
+        assembly {
+            mstore8(add(str, 32), 0x48) //0x48 'H'
+        }
+        console2.logString(string(str));
+        assertTrue(
+            keccak256(str) == keccak256("Hello world"),
+            "result should be equal"
+        );
+    }
+
+    function testSload() public {
+        // normal value
+        demo.SetV0(100);
+        uint256 result = demo.GetV0();
+        assertTrue(result == 100, "result should be 100");
+        uint256 result2 = demo.Sload(0);
+        assertTrue(result2 == 100, "result should be 100");
+
+        //mapping
+        demo.SetMap1Value(address(this), 300);
+        result = demo.GetMap1Value(address(this));
+        assertTrue(result == 300, "result should be 300");
+
+        uint256 slotOfThisValueInMapping = uint256(
+            keccak256(abi.encodePacked(address(this), uint256(1)))
+        );
+
+        result2 = demo.Sload(slotOfThisValueInMapping);
+        console2.logUint(result2);
+        // why?
+        // assertTrue(result2 == 300, "result should be 300");
+    }
+
+    function testSstore() public {
+        demo.SetV0(100);
+        uint256 result = demo.GetV0();
+        assertTrue(result == 100, "result should be 100");
+        demo.Sstore(0, 200);
+        uint256 result2 = demo.GetV0();
+        assertTrue(result2 == 200, "result should be 200");
+    }
+
+    // function testMsize() public view {
+    //     bytes32 result = demo.Msize();
+    //     console2.logString(string(abi.encodePacked(result)));
+    // }
+
+    function testCaller() public {
+        address result = demo.Caller();
+        console2.logAddress(result);
+        assertTrue(result == address(this), "result should be equal");
+
+        (, bytes memory data) = address(demo).delegatecall(
+            abi.encodeWithSignature("Caller()")
+        );
+        address result2 = abi.decode(data, (address));
+        assertTrue(result2 != address(this), "result should not be equal");
+        assertTrue(result2 == msg.sender, "result should be equal");
+    }
+
+    function testCalldataload() public {
+        bytes32 result = demo.Calldataload(4);
+        // 为什么等于4
+        // result := calldataload(4) 刚好跳过函数选择器的4个字节，读取第一个参数的前32个字节
+        assertTrue(uint256(result) == 4, "should equal to the first argument");
+    }
+
+    function testCalldatacopy() public {
+        // 我们会将本函数的函数选择器存到result中
+        bytes memory result = new bytes(4);
+        assembly {
+            // add(result, 32) 跳过result内存布局中的前32个字节，即跳过length，直接指向数据区
+            // calldata的前4个字节是函数选择器
+            calldatacopy(add(result, 32), 0, 4)
+        }
+
+        // 错误的方式：
+        // bytes4 result;
+        // assembly {
+        //     calldatacopy(result, 0, 4)
+        // }
+
+        // 正确的方式
+        // bytes4 result;
+        // assembly {
+        //     let ptr := mload(0x40)
+        //     calldatacopy(ptr, 0, 4)
+        //     result := mload(ptr)
+        // }
+
+        assertTrue(
+            bytes4(result) == this.testCalldatacopy.selector,
+            "should equal to this function's selector"
+        );
+    }
 }

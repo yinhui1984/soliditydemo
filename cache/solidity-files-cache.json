@@ -18,7 +18,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -59,7 +59,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -109,7 +109,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -162,7 +162,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -206,7 +206,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -249,7 +249,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -296,7 +296,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -337,7 +337,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -378,7 +378,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -421,7 +421,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -462,7 +462,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -508,7 +508,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -551,7 +551,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -595,7 +595,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -653,7 +653,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -697,7 +697,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -738,7 +738,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -779,7 +779,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -820,7 +820,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -874,7 +874,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -924,7 +924,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -965,7 +965,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1009,7 +1009,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1044,13 +1044,13 @@
       }
     },
     "src/librarydemo.sol": {
-      "lastModificationDate": 1701065208554,
+      "lastModificationDate": 1701065572640,
       "contentHash": "bc5bbda6ad4781b1fe8d66cdc7ca103b",
       "sourceName": "src/librarydemo.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1094,7 +1094,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1138,7 +1138,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1179,7 +1179,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1226,7 +1226,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1273,7 +1273,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1320,7 +1320,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1361,7 +1361,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1396,13 +1396,13 @@
       }
     },
     "src/yuldemo.sol": {
-      "lastModificationDate": 1701853797335,
-      "contentHash": "1a3c6036946ad8f47d9da041a94485df",
+      "lastModificationDate": 1702016759487,
+      "contentHash": "7c0be70d4fb8af1aecb1c80d0b3acf76",
       "sourceName": "src/yuldemo.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1443,7 +1443,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1503,7 +1503,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1563,7 +1563,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1623,7 +1623,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1683,7 +1683,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1746,7 +1746,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1809,7 +1809,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1869,7 +1869,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1929,7 +1929,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -1983,13 +1983,13 @@
       }
     },
     "test/receive_fallback_demo.t.sol": {
-      "lastModificationDate": 1701051174429,
+      "lastModificationDate": 1701051225433,
       "contentHash": "822c7a3c25f85848ac68569d8f3814c3",
       "sourceName": "test/receive_fallback_demo.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -2055,7 +2055,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -2115,7 +2115,7 @@
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
@@ -2150,13 +2150,13 @@
       }
     },
     "test/yuldemo.t.sol": {
-      "lastModificationDate": 1701854480408,
-      "contentHash": "ab3d64cd73da668e8b6e7e44d111efad",
+      "lastModificationDate": 1702018887648,
+      "contentHash": "b422e9310c95c89a5683cd9d82fe3618",
       "sourceName": "test/yuldemo.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
           "metadata": {
