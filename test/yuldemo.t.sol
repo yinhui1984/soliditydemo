@@ -417,4 +417,17 @@ contract YulDemoTest is DSTest {
             "should equal to this function's selector"
         );
     }
+
+    function testCodeSize() public{
+        (uint256 result1, uint256 result2) = demo.CodeSize();
+        console2.logUint(result1);
+        console2.logUint(result2);
+    }
+
+    function testExtCodeSize() public{
+        (uint256 result1, uint256 result2) = demo.ExtCodeSize();
+        console2.logUint(result1);
+        console2.logUint(result2);
+    }
+
 }

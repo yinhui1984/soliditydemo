@@ -275,4 +275,63 @@ contract YulDemoContract {
         }
         return result;
     }
+
+    function CodeSize() public  returns (uint256, uint256) {
+        uint256 s1;
+        uint256 s2;
+
+        demoContractForCodeSize d = new demoContractForCodeSize();
+        s1 = d.codeSizeCallInConstructor();
+        s2 = d.GetCodeSize();
+
+        return (s1, s2);
+    }
+
+    function ExtCodeSize() public  returns (uint256, uint256) {
+       uint256 s1;
+         uint256 s2;
+         demoContractForExtcodesize d = new demoContractForExtcodesize();
+         s1 = d.extCodeSizeCallInConstructor();
+         s2 = d.GetExtCodeSize();
+        return (s1, s2);
+    }
+
 }
+
+contract demoContractForCodeSize {
+
+    uint256 public codeSizeCallInConstructor ;
+    constructor() {
+        codeSizeCallInConstructor = GetCodeSize();
+    }
+
+    function GetCodeSize() public pure returns (uint256) {
+        uint256 result;
+        assembly {
+            result := codesize()
+        }
+        return result;
+    }
+}
+
+contract demoContractForExtcodesize {
+uint256 public extCodeSizeCallInConstructor ;
+    constructor() {
+        extCodeSizeCallInConstructor = GetExtCodeSize();
+    }
+    function GetExtCodeSize() public view returns (uint256) {
+        uint256 result;
+        address addr = address(this);
+        assembly {
+            result := extcodesize(addr)
+        }
+        return result;
+    }
+}
+
+
+
+
+
+
+
