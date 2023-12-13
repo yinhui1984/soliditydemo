@@ -6,9 +6,11 @@ import "../src/yuldemo.sol";
 
 contract YulDemoTest is DSTest {
     YulDemoContract demo;
+    SimpleContract simple;
 
     function setUp() public {
         demo = new YulDemoContract();
+        simple = new SimpleContract();
     }
 
     function testStop() public view {
@@ -429,5 +431,17 @@ contract YulDemoTest is DSTest {
         console2.logUint(result1);
         console2.logUint(result2);
     }
+
+    function testCallData() public{
+
+         bytes memory data = abi.encodeWithSignature("setValue(uint256)", 100);
+         demo.CallData(address(simple), data);
+
+        data = abi.encodeWithSignature("getValue()");
+        bytes memory result = demo.CallData(address(simple), data);
+        uint256 v = abi.decode(result, (uint256));
+        assertTrue(v==100, "result should be 100");
+    }
+
 
 }

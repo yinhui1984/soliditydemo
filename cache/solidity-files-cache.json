@@ -1396,8 +1396,8 @@
       }
     },
     "src/yuldemo.sol": {
-      "lastModificationDate": 1702370015430,
-      "contentHash": "6703332d930395b2dc6758d81494400c",
+      "lastModificationDate": 1702432509186,
+      "contentHash": "869bf0a062df57973499423bc9d81d4a",
       "sourceName": "src/yuldemo.sol",
       "solcConfig": {
         "settings": {
@@ -1431,6 +1431,9 @@
       "imports": [],
       "versionRequirement": "^0.8.11",
       "artifacts": {
+        "SimpleContract": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "yuldemo.sol/SimpleContract.json"
+        },
         "YulDemoContract": {
           "0.8.21+commit.d9974bed.Darwin.appleclang": "yuldemo.sol/YulDemoContract.json"
         },
@@ -2156,8 +2159,8 @@
       }
     },
     "test/yuldemo.t.sol": {
-      "lastModificationDate": 1702370043416,
-      "contentHash": "c317978b9987baad2ec0e4665a403f25",
+      "lastModificationDate": 1702431910073,
+      "contentHash": "a471922c30979e8447ff95bc60a31b44",
       "sourceName": "test/yuldemo.t.sol",
       "solcConfig": {
         "settings": {

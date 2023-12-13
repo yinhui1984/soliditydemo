@@ -2,25 +2,7 @@
   "abi": [
     {
       "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "GetCodeSize",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "pure",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "codeSizeCallInConstructor",
+      "name": "getValue",
       "outputs": [
         {
           "internalType": "uint256",
@@ -30,23 +12,36 @@
       ],
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "v",
+          "type": "uint256"
+        }
+      ],
+      "name": "setValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
   "bytecode": {
-    "object": "0x608060405234801561001057600080fd5b5061001f61002a60201b60201c565b600081905550610037565b6000803890508091505090565b60e4806100456000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806346e4f9651460375780636319eee0146051575b600080fd5b603d606b565b604051604891906095565b60405180910390f35b60576071565b604051606291906095565b60405180910390f35b60005481565b6000803890508091505090565b6000819050919050565b608f81607e565b82525050565b600060208201905060a860008301846088565b9291505056fea264697066735822122025c7f2c0d233b1b69f7d4f49e1b5a4b79355402aefd784c635a5428ce716442364736f6c63430008150033",
-    "sourceMap": "9351:335:17:-:0;;;9437:72;;;;;;;;;;9489:13;:11;;;:13;;:::i;:::-;9461:25;:41;;;;9351:335;;9515:169;9559:7;9578:14;9635:10;9625:20;;9671:6;9664:13;;;9515:169;:::o;9351:335::-;;;;;;;",
+    "object": "0x608060405234801561001057600080fd5b50610150806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063209652551461003b5780635524107714610059575b600080fd5b610043610075565b60405161005091906100a1565b60405180910390f35b610073600480360381019061006e91906100ed565b61007e565b005b60008054905090565b8060008190555050565b6000819050919050565b61009b81610088565b82525050565b60006020820190506100b66000830184610092565b92915050565b600080fd5b6100ca81610088565b81146100d557600080fd5b50565b6000813590506100e7816100c1565b92915050565b600060208284031215610103576101026100bc565b5b6000610111848285016100d8565b9150509291505056fea26469706673582212201f74db6a743df32d19b1db7825eeab3280a2b4d8f906a4706e1bdd007d690ff364736f6c63430008150033",
+    "sourceMap": "10085:207:17:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806346e4f9651460375780636319eee0146051575b600080fd5b603d606b565b604051604891906095565b60405180910390f35b60576071565b604051606291906095565b60405180910390f35b60005481565b6000803890508091505090565b6000819050919050565b608f81607e565b82525050565b600060208201905060a860008301846088565b9291505056fea264697066735822122025c7f2c0d233b1b69f7d4f49e1b5a4b79355402aefd784c635a5428ce716442364736f6c63430008150033",
-    "sourceMap": "9351:335:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;9390:40;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;9515:169;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;9390:40;;;;:::o;9515:169::-;9559:7;9578:14;9635:10;9625:20;;9671:6;9664:13;;;9515:169;:::o;7:77:19:-;44:7;73:5;62:16;;7:77;;;:::o;90:118::-;177:24;195:5;177:24;:::i;:::-;172:3;165:37;90:118;;:::o;214:222::-;307:4;345:2;334:9;330:18;322:26;;358:71;426:1;415:9;411:17;402:6;358:71;:::i;:::-;214:222;;;;:::o",
+    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063209652551461003b5780635524107714610059575b600080fd5b610043610075565b60405161005091906100a1565b60405180910390f35b610073600480360381019061006e91906100ed565b61007e565b005b60008054905090565b8060008190555050565b6000819050919050565b61009b81610088565b82525050565b60006020820190506100b66000830184610092565b92915050565b600080fd5b6100ca81610088565b81146100d557600080fd5b50565b6000813590506100e7816100c1565b92915050565b600060208284031215610103576101026100bc565b5b6000610111848285016100d8565b9150509291505056fea26469706673582212201f74db6a743df32d19b1db7825eeab3280a2b4d8f906a4706e1bdd007d690ff364736f6c63430008150033",
+    "sourceMap": "10085:207:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;10143:79;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;10228:62;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;10143:79;10184:7;10210:5;;10203:12;;10143:79;:::o;10228:62::-;10282:1;10274:5;:9;;;;10228:62;:::o;7:77:19:-;44:7;73:5;62:16;;7:77;;;:::o;90:118::-;177:24;195:5;177:24;:::i;:::-;172:3;165:37;90:118;;:::o;214:222::-;307:4;345:2;334:9;330:18;322:26;;358:71;426:1;415:9;411:17;402:6;358:71;:::i;:::-;214:222;;;;:::o;523:117::-;632:1;629;622:12;769:122;842:24;860:5;842:24;:::i;:::-;835:5;832:35;822:63;;881:1;878;871:12;822:63;769:122;:::o;897:139::-;943:5;981:6;968:20;959:29;;997:33;1024:5;997:33;:::i;:::-;897:139;;;;:::o;1042:329::-;1101:6;1150:2;1138:9;1129:7;1125:23;1121:32;1118:119;;;1156:79;;:::i;:::-;1118:119;1276:1;1301:53;1346:7;1337:6;1326:9;1322:22;1301:53;:::i;:::-;1291:63;;1247:117;1042:329;;;;:::o",
     "linkReferences": {}
   },
   "methodIdentifiers": {
-    "GetCodeSize()": "6319eee0",
-    "codeSizeCallInConstructor()": "46e4f965"
+    "getValue()": "20965255",
+    "setValue(uint256)": "55241077"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"GetCodeSize\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"codeSizeCallInConstructor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/yuldemo.sol\":\"demoContractForCodeSize\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"src/yuldemo.sol\":{\"keccak256\":\"0xf751c9a448b7e0ac21f6ff36848dbc9069ff7a89693d607f0132b30d8b315683\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://36e7a15a45a1bef68383edcb5ef8b752a17515c5fc40271eedc2dc863576cc64\",\"dweb:/ipfs/QmPNXKzp8roiz5BqgR7oEcxt3ovq5HZNFfHi4daBcgsCX7\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"v\",\"type\":\"uint256\"}],\"name\":\"setValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/yuldemo.sol\":\"SimpleContract\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"src/yuldemo.sol\":{\"keccak256\":\"0xf751c9a448b7e0ac21f6ff36848dbc9069ff7a89693d607f0132b30d8b315683\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://36e7a15a45a1bef68383edcb5ef8b752a17515c5fc40271eedc2dc863576cc64\",\"dweb:/ipfs/QmPNXKzp8roiz5BqgR7oEcxt3ovq5HZNFfHi4daBcgsCX7\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.21+commit.d9974bed"
@@ -56,27 +51,9 @@
       "abi": [
         {
           "inputs": [],
-          "stateMutability": "nonpayable",
-          "type": "constructor"
-        },
-        {
-          "inputs": [],
-          "stateMutability": "pure",
-          "type": "function",
-          "name": "GetCodeSize",
-          "outputs": [
-            {
-              "internalType": "uint256",
-              "name": "",
-              "type": "uint256"
-            }
-          ]
-        },
-        {
-          "inputs": [],
           "stateMutability": "view",
           "type": "function",
-          "name": "codeSizeCallInConstructor",
+          "name": "getValue",
           "outputs": [
             {
               "internalType": "uint256",
@@ -84,6 +61,18 @@
               "type": "uint256"
             }
           ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "v",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setValue"
         }
       ],
       "devdoc": {
@@ -115,7 +104,7 @@
         "bytecodeHash": "ipfs"
       },
       "compilationTarget": {
-        "src/yuldemo.sol": "demoContractForCodeSize"
+        "src/yuldemo.sol": "SimpleContract"
       },
       "libraries": {}
     },
