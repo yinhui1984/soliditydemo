@@ -420,28 +420,63 @@ contract YulDemoTest is DSTest {
         );
     }
 
-    function testCodeSize() public{
+    function testCodeSize() public {
         (uint256 result1, uint256 result2) = demo.CodeSize();
         console2.logUint(result1);
         console2.logUint(result2);
     }
 
-    function testExtCodeSize() public{
+    function testExtCodeSize() public {
         (uint256 result1, uint256 result2) = demo.ExtCodeSize();
         console2.logUint(result1);
         console2.logUint(result2);
     }
 
-    function testCallData() public{
-
-         bytes memory data = abi.encodeWithSignature("setValue(uint256)", 100);
-         demo.CallData(address(simple), data);
+    function testCallData() public {
+        bytes memory data = abi.encodeWithSignature("setValue(uint256)", 100);
+        demo.CallData(address(simple), data);
 
         data = abi.encodeWithSignature("getValue()");
         bytes memory result = demo.CallData(address(simple), data);
         uint256 v = abi.decode(result, (uint256));
-        assertTrue(v==100, "result should be 100");
+        assertTrue(v == 100, "result should be 100");
     }
 
+    function testCall() public {
+        address addr = address(simple);
+        bytes4 selector = bytes4(keccak256("setValue(uint256)"));
+        assembly {
+            let ptr := mload(0x40)
+            mstore(ptr, selector) // 先放置函数选择器
+            mstore(add(ptr, 0x4), 888) // 紧接着是参数
+            let success := call(
+                gas(), // gas
+                addr, // to
+                0, // value
+                ptr, // input
+                0x24, // input size
+                ptr, // output
+                0 // output size
+            )
+        }
 
+        uint256 result; // = simple.getValue();
+        selector = bytes4(keccak256("getValue()"));
+        assembly {
+            let ptr := mload(0x40)
+            mstore(ptr, selector) // 先放置函数选择器, 没有参数
+            let success := call(
+                gas(), // gas
+                addr, // to
+                0, // value
+                ptr, // input
+                0x4, // input size
+                ptr, // output
+                0x20 // output size
+            )
+            result := mload(ptr)
+        }
+
+        assertTrue(result == 888, "result should be 888");
+    }
 }
