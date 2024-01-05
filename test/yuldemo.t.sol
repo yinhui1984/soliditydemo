@@ -479,4 +479,10 @@ contract YulDemoTest is DSTest {
 
         assertTrue(result == 888, "result should be 888");
     }
+
+    function testCallCode() public {
+        demo.CallCode(address(simple), 100);
+        // console2.logUint(demo.GetV0());
+        assertTrue(demo.GetV0() == 100, "result should be 100");
+    }
 }

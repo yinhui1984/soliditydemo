@@ -327,6 +327,27 @@ contract YulDemoContract {
 
         return result;
     }
+
+    function CallCode(address addrOfSimpleContract, uint256 value) public{
+        bytes4 selector = bytes4(keccak256("setValue(uint256)"));
+        bool success;
+        assembly{
+            let ptr := mload(0x40)
+            mstore(ptr, selector)
+            mstore(add(ptr, 0x4), value)
+            success := callcode(
+                gas(),
+                addrOfSimpleContract,
+                0,
+                ptr,
+                0x24,
+                ptr,
+                0
+            )
+        }
+
+        require(success, "call code failed");
+    }
 }
 
 contract demoContractForCodeSize {
