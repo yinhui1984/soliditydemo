@@ -348,6 +348,16 @@ contract YulDemoContract {
 
         require(success, "call code failed");
     }
+
+    function Return() public pure returns (bytes memory){
+        assembly{
+            let ptr:=mload(0x40)
+            mstore(ptr, 0x5)
+            mstore(add(ptr,0x20), "hello")
+            mstore(0x40, add(ptr, 0x25))
+            return(ptr,0x25)
+        }
+    }
 }
 
 contract demoContractForCodeSize {

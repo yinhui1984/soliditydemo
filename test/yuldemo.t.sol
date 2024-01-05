@@ -485,4 +485,9 @@ contract YulDemoTest is DSTest {
         // console2.logUint(demo.GetV0());
         assertTrue(demo.GetV0() == 100, "result should be 100");
     }
+
+    function testFailReturn() public view {
+        bytes memory r = demo.Return();
+        console2.logBytes(r);
+    }
 }
