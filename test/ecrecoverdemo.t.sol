@@ -2,7 +2,7 @@
 pragma solidity ^0.8.10;
 
 import "forge-std/Test.sol";
-import "src/ecrecoverDemo.sol";
+import "src/ecrecoverdemo.sol";
 
 contract EcrecoverDemoTest is Test {
     EcrecoverDemo ecd;
